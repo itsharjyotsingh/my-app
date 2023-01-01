@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import Navbar from './Components/Navbar';
+import UnderNav from './Components/UnderNav';
+import {useState} from 'react';
 import './App.css';
 
+
 function App() {
+  const [mode,setMode] = useState('light');
+  
+  function toggleMode() {
+    if(mode==='light') {
+      setMode('dark');
+      document.querySelector('body').style.backgroundColor = '#810CA8';
+    } else {
+      setMode('light');
+      document.querySelector('body').style.backgroundColor = '#F3CCFF';
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar heading='Heading' mode={mode} toggleMode={toggleMode}/>
+      <UnderNav name='name' mode={mode} who='who'/>
+    </>
   );
 }
 
