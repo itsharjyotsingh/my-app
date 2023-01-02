@@ -2,9 +2,9 @@ import React from "react";
 
 function Navbar(props) {
     return (
-        <nav className="navbar navbar-expand-lg" style={{backgroundColor:props.mode==='light'?'#FFFFD0':'#2D033B'}}>
+        <nav className="navbar navbar-expand-lg" style={{backgroundColor:props.mode==='light'?'#FFFFFF':'black'}}>
             <div className="container-fluid">
-                <h1 className={`navbar-brand text-${props.mode==='light'?'dark':'light'}`} href="#">{props.heading}</h1>
+                <h1 className={`navbar-brand`} style={{color:props.mode==='light'?'#3366ff':'white'}} href="#">{props.heading}</h1>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -13,7 +13,7 @@ function Navbar(props) {
                     </ul>
                     <div className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
-                        <label className={`form-check-label text-${props.mode==='light'?'dark':'light'}`} htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+                        <label className={`form-check-label`} style={{color:props.mode==='light'?'#3366ff':'white'}} htmlFor="flexSwitchCheckDefault">Change Theme</label>
                     </div>
                 </div>
             </div>

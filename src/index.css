@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+hr {
+  border-top: 8px solid black;
+  border-style: dotted;
+  width: 5%;
+  opacity: 1;
+}
+
+#slidesh {
+  object-fit: cover;
+  height: 620px;
+  width: 620px;
+}
+
+#horiLine {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  hr {
+    border-top: 6px solid black;
+    border-style: dotted;
+  width: 10%;
+  }
+  #slidesh {
+    object-fit: cover;
+  height: 500px;
+  width: 520px;
+  }
+}
