@@ -14,7 +14,7 @@ function App() {
   function toggleMode() {
     if(mode==='light') {
       setMode('dark');
-      document.querySelector('body').style.backgroundColor = '#ff9900';
+      document.querySelector('body').style.backgroundColor = '#FFD369';
       document.querySelector('#upate').style.borderColor = '#00333';
     } else {
       setMode('light');
@@ -24,8 +24,8 @@ function App() {
   }
   return (
     <>
-      <Navbar heading='Heading' mode={mode} toggleMode={toggleMode}/>
-      <UnderNav name='name' mode={mode} who='who'/>
+      <Navbar heading='My Love' mode={mode} toggleMode={toggleMode}/>
+      <UnderNav name='Anjali' mode={mode} who='Baby'/>
       <Space/>
       <Caraousal/>
       <Space/>
