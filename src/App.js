@@ -2,8 +2,10 @@ import Navbar from './Components/Navbar';
 import UnderNav from './Components/UnderNav';
 import Space from './Components/Space';
 import Caraousal from './Components/Caraousal';
+import Message from './Components/Message';
 import {useState} from 'react';
 import './App.css';
+import Paragraphs from './Components/Paragraphs';
 
 
 function App() {
@@ -26,6 +28,10 @@ function App() {
       <UnderNav name='name' mode={mode} who='who'/>
       <Space/>
       <Caraousal/>
+      <Space/>
+      <Paragraphs mode={mode}/>
+      <Space/>
+      <Message mode={mode}/>
       <Space/>
     </>
   );
